@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="msapplication-tp-highlight" content="no"/>
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes.
+                        see https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no,
+                                       initial-scale=1, maximum-scale=1, minimum-scale=1,
+                                       width=device-width, height=device-height,
+                                       target=densitydpi=devicedpi"/>
+
+        <title>Hello World</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<!-- jquery required at top to apply stylings (Prevents the flash) -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="./resources/css/styles.css">
+
+
+    </head>
+    <body>
+        <main id="container">
+
+             <audio id="player"/>
+                <source src="./resources/audio/sunshine.mp3" />
+                <source src="./resources/audio/sunshine.ogg" />
+            </audio>
+
+			<section>
+				<button id="btnPlay">Play</button>
+				<button id="btnPause">Pause</button>
+				<button id="btnStop">Stop</button>
+				<label for="rngVolume">Volume</label>
+				<input type="range" id="rngVolume" min="0" max="1" step=".01" value='.5' data-highlight="true" onchange="changeVolume()"/>
+			</section>
+			<article>
+			<section>
+			<ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">Songs</li>
+                <li><a href="#" onclick="changeSong('sunshine')">Sunshine</a></li>
+                <li><a href="#" onclick="changeSong('iSee')">I See</a></li>
+                <li><a href="#" onclick="changeSong('finalRewind')">The Final Rewind</a></li>
+                <li><a href="#" onclick="changeSong('audioBeast')">Audio Beast</a></li>
+                <li><a href="#" onclick="changeSong('meaning')">Meaning</a></li>
+            </ul>
+            </section>
+			</article>
+			<div data-role="footer">
+	           <output id="timeOut">Elapsed Time:</output>
+            </div>
+
+
+
+        </main <!-- End of Container -->
+
+		<script type="text/javascript" src="./resources/js/scripts.js"></script>
+
+    </body>
+</html>
